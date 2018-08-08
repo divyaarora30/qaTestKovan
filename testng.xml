@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--
+Use below to run tests in each browser one by one
+<suite name="Suite" parallel="none">
+-->
+<suite name="Suite" parallel="tests" thread-count="2">
+
+    <test name="FirefoxTest">
+
+        <parameter name="browser" value="firefox"/>
+
+        <classes>
+
+            <class name="com.kovan.testcases.TestCaseOne"/>
+            <class name="com.kovan.testcases.TestCaseTwo"/>
+
+        </classes>
+
+    </test>
+
+    <test name="ChromeTest">
+
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+
+            <class name="com.kovan.testcases.TestCaseOne"/>
+            <class name="com.kovan.testcases.TestCaseTwo"/>
+
+        </classes>
+
+    </test>
+
+</suite>
